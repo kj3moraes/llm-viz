@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # OUTPUTDIR is directory containing this run.sh script
-OUTPUTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+OUTPUTDIR="./outputs/"
 
 python train.py \
   --num_hidden_layers 6 \
