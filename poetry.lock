@@ -182,6 +182,20 @@ tests-mypy = ["mypy (>=1.6)", "pytest-mypy-plugins"]
 tests-no-zope = ["attrs[tests-mypy]", "cloudpickle", "hypothesis", "pympler", "pytest (>=4.3.0)", "pytest-xdist[psutil]"]
 
 [[package]]
+name = "bitsandbytes"
+version = "0.42.0"
+description = "k-bit optimizers and matrix multiplication routines."
+optional = false
+python-versions = "*"
+files = [
+    {file = "bitsandbytes-0.42.0-py3-none-any.whl", hash = "sha256:63798680912cc63bb77b535a2d0860af024e290a52e157f777ad2a52e2585967"},
+    {file = "bitsandbytes-0.42.0.tar.gz", hash = "sha256:fc1505f184f0d275766f2a6c663f1a43b734c1409b5c5a406f3a6073d9f329fd"},
+]
+
+[package.dependencies]
+scipy = "*"
+
+[[package]]
 name = "boto3"
 version = "1.34.122"
 description = "The AWS SDK for Python"
@@ -1441,6 +1455,48 @@ files = [
 [package.dependencies]
 intel-openmp = "==2021.*"
 tbb = "==2021.*"
+
+[[package]]
+name = "mlx"
+version = "0.15.1"
+description = "A framework for machine learning on Apple silicon."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "mlx-0.15.1-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:6e9929f4aee6c782faa76bd633c0791b1f8a6c6cb44101af62ba525ae8c45f12"},
+    {file = "mlx-0.15.1-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:74b2674625dd97627aac4ee4ec9089e97b8aac78c3a2a0420e46ca9e19b42355"},
+    {file = "mlx-0.15.1-cp311-cp311-macosx_13_0_arm64.whl", hash = "sha256:7da28be1a2bd361fa30a4441c21c9816ab0f1e0bf3b76aa8a46891fa9c8bfad5"},
+    {file = "mlx-0.15.1-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:6ab11cb32dcc9e0e57d419f560885014f4977224790c2ebdc0f8d9fa611b9fbb"},
+    {file = "mlx-0.15.1-cp312-cp312-macosx_13_0_arm64.whl", hash = "sha256:a4506f56a18b1b0d039be1ecf0c81d05815ea64124a3bd62cdac2ea651ab7939"},
+    {file = "mlx-0.15.1-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:1bd06322d997fc8b1d624ad447652c4056ef7030b4db41c74b1698d25d6c3239"},
+    {file = "mlx-0.15.1-cp38-cp38-macosx_13_0_arm64.whl", hash = "sha256:4806e5882076d92efa97108aa2aa6ab94f8c0ca850f839b9b4d9b7c16dc2140d"},
+    {file = "mlx-0.15.1-cp38-cp38-macosx_14_0_arm64.whl", hash = "sha256:bfee07107faf21ae7716c7d1e60e30d824338227226f7ff3a87b3796563c2934"},
+    {file = "mlx-0.15.1-cp39-cp39-macosx_13_0_arm64.whl", hash = "sha256:14c3fab3321c08d4f2995c03bda13d3960d7bf1cebe20ffe5e5d28ea875984c4"},
+    {file = "mlx-0.15.1-cp39-cp39-macosx_14_0_arm64.whl", hash = "sha256:97f62ee9baad27e8ab34c3ed1a6116c51902e9bcc45326ea5387589ec73fb990"},
+]
+
+[package.extras]
+dev = ["pre-commit"]
+testing = ["numpy", "torch"]
+
+[[package]]
+name = "mlx-lm"
+version = "0.14.3"
+description = "LLMs on Apple silicon with MLX and the Hugging Face Hub"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "mlx_lm-0.14.3-py3-none-any.whl", hash = "sha256:0ee4658619d0b2b55fedf04b21258253b244eb754723933f6386637693af3570"},
+    {file = "mlx_lm-0.14.3.tar.gz", hash = "sha256:b8d09897b6bd5ebaf60a38a48a072fdc64341e49ae13c25653739d7f5c5cff39"},
+]
+
+[package.dependencies]
+jinja2 = "*"
+mlx = ">=0.14.1"
+numpy = "*"
+protobuf = "*"
+pyyaml = "*"
+transformers = ">=4.39.3"
 
 [[package]]
 name = "mpmath"
@@ -3578,4 +3634,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "0316f4bcf7db7b12ce287eb1e59d6a55d07462d2971214d74f2c91c7560cb534"
+content-hash = "a48e8a4f7d047520779cd8c0e78b083fcbdc62d77df9c4ce302f2687b2bb7b1c"
