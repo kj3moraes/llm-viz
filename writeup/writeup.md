@@ -16,7 +16,7 @@ With regards to 1., I was just curious to see how the attention Mixtral paid to 
 
 ## Methodology and Results
 
-I started with the `attention-maps` experiment because I could do that the quickest. I managed to visualize GPT-2 and Mistral. The attention maps are side-by-side below.
+I started with the `attention-maps` experiment because I could do that the quickest. I managed to visualize GPT-2 and Mixtral.
 
 Next with 2. Nothing of note here. I managed to execute and save the routes of different tokens through different experts
 
@@ -24,7 +24,7 @@ For 3., I visualized the token percentages for 3. different datasets
 
 1. stanfordnlp/imdb - a dataset for positive and negative reviews of movies
 2. databricks/databricks-dolly-15k - a qa dataset with a instruction question and a response
-3. bigcode/bigcodebench - a coding dataset. 
+3. bigcode/bigcodebench - a coding dataset.
 
 The token percentages for the 3 are below.
 
@@ -34,9 +34,10 @@ The token percentages for the 3 are below.
 **Last Layer Experts**
 ![](./images/visualization-last.png)
 
-
 ## What's next
 
 Although this was disappointing that there is nothing significant that each expert learned, there is a lot more to explore. Anthropic's recent papers on monosemanticity show promise at extracting what LLMs have learned. What does that mean ?
 
 The next step would be to replicate and apply the same feature extraction pipeline onto Mixtral. Maybe this might yeild some results.
+
+Secondly a paper came out about introducing [ESFT - Expert Specialized Fine Tuning](https://arxiv.org/pdf/2407.01906) where they tune experts most relevant to a downstream task and freeze the rest. This might be interesting to replicate.
